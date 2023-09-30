@@ -37,8 +37,8 @@ export class Logger<Type> implements ILogger<Type> {
   }
 
   private formatLog(currentTime: Date, logLevel: string, context: string, ...parameters: Array<any>): string {
-    const formattedCurrentTime = DateUtilities.formatDate(currentTime, ({ day, month, year, hoursIn12hFormat: hours, minutes, seconds, amPm, timezone, }) => {
-      return `${day}-${month}-${year} ${hours}:${minutes}:${seconds} ${amPm} (${timezone})`;
+    const formattedCurrentTime = DateUtilities.formatDate(currentTime, ({ day, shortMonthName, year, hoursIn12hFormat: hours, minutes, seconds, amPm, timezone, }) => {
+      return `${day}-${shortMonthName}-${year} ${hours}:${minutes}:${seconds} ${amPm} (${timezone})`;
     });
 
     let message: string = `${formattedCurrentTime} [${logLevel}] [${context}] `;
