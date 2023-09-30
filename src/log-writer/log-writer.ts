@@ -40,8 +40,8 @@ export class LogWriter implements ILogWriter {
   }
 
   private formatLogFileNameWithoutExtension(currentDate: Date, configuration: LoggerConfiguration): string {
-    const currentDay = DateUtilities.formatDate(currentDate, ({ day, month, year, }) => {
-      return `${day}-${month}-${year}`;
+    const currentDay = DateUtilities.formatDate(currentDate, ({ day, shortMonthName, year, }) => {
+      return `${day}-${shortMonthName}-${year}`;
     });
 
     return `${currentDay}${StringUtilities.isEmpty(configuration.instanceId) ? configuration.instanceId : `.${configuration.instanceId}`}`;

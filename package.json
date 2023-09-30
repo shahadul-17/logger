@@ -1,6 +1,6 @@
 {
   "name": "@shahadul-17/logger",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple and lightweight logger for Node.js",
   "author": "Md. Shahadul Alam Patwary",
   "license": "MIT",
